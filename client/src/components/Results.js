@@ -1,7 +1,7 @@
 import React from 'react';
 import Alert from './Alert';
 
-const Results = ({ loading, results, prompt }) => {
+const Results = ({ loading, statusCode, results, prompt }) => {
     if (loading) {
         return (
             <section className="results">
@@ -10,7 +10,7 @@ const Results = ({ loading, results, prompt }) => {
         )
     }
 
-    return <Alert results={results} prompt={prompt} />
+    return <Alert statusCode={statusCode} results={results} prompt={prompt} />
 }
 
 export default Results;
