@@ -9,7 +9,8 @@ class LoginPage extends Component {
             firstName: "",
             email: "",
             submit: false,
-            success: false
+            success: false,
+            statusCode: null
         }
     }
 
@@ -52,10 +53,11 @@ class LoginPage extends Component {
             email: email.toLowerCase()
         })
             .then(res => {
-                this.handleCloseModal();
                 if (res.status === 200) {
-                    this.setState({ submit: true, success: true });
+                    this.setState({ submit: true, success: true, statusCode: res.status });
                 }
+
+                this.handleCloseModal();
             })
             .catch(err => {
                 console.log("Error: Email already registered.");
@@ -91,17 +93,18 @@ class LoginPage extends Component {
             firstName: "",
             email: "",
             submit: false,
-            success: false
+            success: false, 
+            statusCode: null
         })
     }
 
     render() {
-        const { firstName, email, submit, success } = this.state;
+        const { firstName, email, submit, success, statusCode } = this.state;
         return (
             <section id="login-page">
                 <section id="login-button-block">
                     <p id="user">{success ? `Hello, ${firstName}` : ""}</p>
-                    <LoginButton success={success} handleLogin={this.handleLoginButton} handleLogout={this.handleLogout} />
+                    <LoginButton success={success} statusCode={statusCode} handleLogin={this.handleLoginButton} handleLogout={this.handleLogout} />
                 </section>
 
                 <section id="login-form-modal">
