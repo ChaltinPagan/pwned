@@ -34,5 +34,5 @@ Server
     * Open a new terminal.
     * `npm start`
 5. Guest Login
-    * Name: `"Doe"`
+    * Name: `Doe`
     * Email `doe@testemail.com`
