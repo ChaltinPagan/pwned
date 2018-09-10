@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Alert = ({ results, prompt }) => {
-    if (results === null) {
+const Alert = ({ statusCode, results, prompt }) => {
+    if (statusCode === null) {
         return <p className="results">{prompt ? "Please enter a password" : ""}</p>
     }
 
-    if (results === 0)
+    if (results === 0 || results === undefined)
         return (
             <section className="results" id="alert-info">
                 <i class="fas fa-check-circle fa-7x"></i>
