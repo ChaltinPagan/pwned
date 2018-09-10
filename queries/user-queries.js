@@ -14,7 +14,6 @@ const getUsers = (req, res, next) => {
 }
 
 const loginUser = (req, res, next) => {
-    // console.log("body: ", req.body)
     db.any('SELECT * FROM users WHERE email=${email}', req.body)
         .then(data => {
             if (data.length) {
