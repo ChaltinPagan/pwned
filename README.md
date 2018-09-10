@@ -21,7 +21,7 @@ Server
 
 ## Installation
 
-1. Clone this repository.
+1. Clone the master branch of this repository.
 2. Run the client side.
     * Open a terminal
     * `cd client`
