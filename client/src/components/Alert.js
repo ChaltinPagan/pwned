@@ -5,7 +5,7 @@ const Alert = ({ statusCode, results, prompt }) => {
         return <p className="results">{prompt ? "Please enter a password" : ""}</p>
     }
 
-    if (statusCode === 204)
+    if (results === 0 || results === undefined)
         return (
             <section className="results" id="alert-info">
                 <i class="fas fa-check-circle fa-7x"></i>
