@@ -1,0 +1,22 @@
+{
+  "name": "pwned",
+  "version": "1.0.0",
+  "description": "Find out if your password has been compromised in a data breach.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "hasha": "^3.0.0",
+    "morgan": "^1.9.0",
+    "node": "^10.10.0",
+    "nodemon": "^1.18.4",
+    "pg-promise": "^8.4.6"
+  }
+}
