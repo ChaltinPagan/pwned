@@ -11,6 +11,7 @@ class App extends Component {
     super();
     this.state = {
       userInput: "",
+      statusCode: null,
       results: null,
       loading: false,
       prompt: false
@@ -37,6 +38,7 @@ class App extends Component {
           .then(res => {
             setTimeout(() => {
               this.setState({
+                statusCode: res.status,
                 results: res.data.count,
                 loading: false
               })
@@ -47,7 +49,7 @@ class App extends Component {
   }
 
   render() {
-    const { prompt, results, loading } = this.state;
+    const { prompt, statusCode, results, loading } = this.state;
     return (
       <div id="home-page">
         <Header />
@@ -56,7 +58,7 @@ class App extends Component {
 
         <Form onChange={this.handleUserInput} onClick={this.handleSubmit} />
 
-        <Results loading={loading} results={results} prompt={prompt}/>
+        <Results loading={loading} statusCode={statusCode} results={results} prompt={prompt}/>
       </div>
     );
   }
