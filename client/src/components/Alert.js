@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Alert = ({ statusCode, results, prompt }) => {
-    if (statusCode === null) {
+    if (results === null) {
         return <p className="results">{prompt ? "Please enter a password" : ""}</p>
     }
 
