@@ -100,7 +100,7 @@ class LoginPage extends Component {
         return (
             <section id="login-page">
                 <section id="login-button-block">
-                    <p id="user">{success ? `Welcome, ${firstName}` : ""}</p>
+                    <p id="user">{success ? `Hello, ${firstName}` : ""}</p>
                     <LoginButton success={success} handleLogin={this.handleLoginButton} handleLogout={this.handleLogout} />
                 </section>
 
