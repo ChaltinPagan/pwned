@@ -3,7 +3,7 @@ const logger = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
-const port = process.env.URL || 8000;
+const port = process.env.PORT || 8000;
 
 const pwned = require('./routes/pwned');
 const users = require('./routes/users');
