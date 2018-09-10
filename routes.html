@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Checker Routes</title>
+
+    <style>
+        th, td, caption {
+            border-bottom: 1px solid black;
+            padding: 0.5em;
+        }
+        table {
+            margin-bottom: 2em;
+        }
+        caption {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Checker Routes</h1>
+    <h2>Base URL: http://localhost:8000</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Request</th>
+                <th>Data</th>
+                <th>Endpoint</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GET</td>
+                <td>Home Page</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>Search for pwned password</td>
+                <td>/:input</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
